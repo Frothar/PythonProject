@@ -1,12 +1,19 @@
-from bubble_sort import bubble_sort
-from merge_sort import merge_sort
+from sorting.bubble_sort import bubble_sort
+from sorting.merge_sort import merge_sort
 
+def main():
+    # Przykładowa lista
+    numbers = [64, 25, 12, 22, 11, 90, 3, 10]
+    print("Oryginalna lista:", numbers)
 
-def sorting_example():
-    numbers = [64, 34, 25, 12, 22, 11, 90]
-    print("Original Array:", numbers)
-    print("Bubble Sort:", bubble_sort(numbers.copy()))
-    print("Merge Sort:", merge_sort(numbers))
+    # Bubble sort
+    bubble_sorted_numbers = numbers[:]
+    bubble_sort(bubble_sorted_numbers)
+    print("Po bubble sort:", bubble_sorted_numbers)
 
-if __name__ == '__main__':
-    sorting_example()
+    # Merge sort
+    merge_sorted_numbers = merge_sort(numbers)
+    print("Po merge sort:", merge_sorted_numbers)
+
+if __name__ == "__main__":
+    main()
